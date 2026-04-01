@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Construct Font Fixer",
+    "version": "0.1",
+    "description": "Reverses the new annoying Consturct website fonts to the good ol' fonts!",
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Construct Font Fixer"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://construct.hackclub.com/*", "*://localhost:*/*"],
+            "js": ["content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": ["storage"]
+}
